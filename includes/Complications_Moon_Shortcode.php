@@ -21,7 +21,7 @@ class Complications_Moon_Shortcode {
 
 		$params = $this->base->parseParams($atts);
 
-		return "<div id='complications_moon_".$id."' class='complications_moon_shortcode' width='".$params['width']."' color='".$params['color']."' hidearrow='".$params['arrow']."' style='".$params['style']."'>Moon Loading...</div>";
+		return "<div id='complications_moon_".esc_attr($id)."' class='complications_moon_shortcode' width='".esc_attr($params['width'])."' color='".esc_attr($params['color'])."' hidearrow='".esc_attr($params['arrow'])."' style='".esc_attr($params['style'])."'>Moon Loading...</div>";
 	}
 
 	//https://developer.wordpress.org/reference/functions/wptexturize/

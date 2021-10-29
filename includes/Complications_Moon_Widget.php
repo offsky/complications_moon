@@ -25,17 +25,17 @@ class Complications_Moon_Widget extends WP_Widget {
 
 		$params = $this->base->parseParams($instance);
 
-		echo "<div id='complications_moon_".$id."' class='complications_moon_widget' width='".$params['width']."' color='".$params['color']."' hidearrow='".$params['arrow']."' style='".$params['style']."'>Moon Loading...</div>";
+		echo "<div id='complications_moon_".esc_attr($id)."' class='complications_moon_widget' width='".esc_attr($params['width'])."' color='".esc_attr($params['color'])."' hidearrow='".esc_attr($params['arrow'])."' style='".esc_attr($params['style'])."'>Moon Loading...</div>";
 	}
 
 	public function form($instance) {
 		$defaults = array('color' => '#fff','width' => '', 'hidearrow'=>0, 'colortransparent'=>1);
-		$instance = wp_parse_args( (array)$instance, $defaults);
+		$instance = wp_parse_args((array)$instance, $defaults);
 		
 		$output = "";
 
 		$output .= '<p><label for="'.$this->get_field_id('color').'">Background Color</label><br>';
-		$output .= '<input id="'.$this->get_field_id('color').'" name="'.$this->get_field_name('color').'" type="color" value="'.$instance['color'].'" />';
+		$output .= '<input id="'.$this->get_field_id('color').'" name="'.$this->get_field_name('color').'" type="color" value="'.esc_attr($instance['color']).'" />';
 	
 		$isChecked = "";
 		if(!empty($instance['colortransparent'])) $isChecked = 'checked="checked"';
@@ -45,7 +45,7 @@ class Complications_Moon_Widget extends WP_Widget {
 
 
 		$output .= '<p><label for="'.$this->get_field_id('maxwidth').'">Maximum Width (pixels)</label><br>';
-		$output .= '<input id="'.$this->get_field_id('maxwidth').'" name="'.$this->get_field_name('maxwidth').'" type="number" value="'.$instance['maxwidth'].'" /></p>';
+		$output .= '<input id="'.$this->get_field_id('maxwidth').'" name="'.$this->get_field_name('maxwidth').'" type="number" value="'.esc_attr($instance['maxwidth']).'" /></p>';
 
 
 		$output .= '<p><label for="'.$this->get_field_id('hidearrow').'">Terminator Arrow</label><br>';
