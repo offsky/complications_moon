@@ -32,31 +32,28 @@ class Complications_Moon_Widget extends WP_Widget {
 		$defaults = array('color' => '#fff','width' => '', 'hidearrow'=>0, 'colortransparent'=>1);
 		$instance = wp_parse_args((array)$instance, $defaults);
 		
-		$output = "";
 
-		$output .= '<p><label for="'.$this->get_field_id('color').'">Background Color</label><br>';
-		$output .= '<input id="'.$this->get_field_id('color').'" name="'.$this->get_field_name('color').'" type="color" value="'.esc_attr($instance['color']).'" />';
+		echo '<p><label for="'.$this->get_field_id('color').'">Background Color</label><br>';
+		echo '<input id="'.$this->get_field_id('color').'" name="'.$this->get_field_name('color').'" type="color" value="'.esc_attr($instance['color']).'" />';
 	
-		$isChecked = "";
-		if(!empty($instance['colortransparent'])) $isChecked = 'checked="checked"';
-
-		$output .= ' or <input id="'.$this->get_field_id('colortransparent').'" name="'.$this->get_field_name('colortransparent').'" type="checkbox" value="1" '.$isChecked.'/>';
-		$output .= '<label for="'.$this->get_field_id('colortransparent').'">Transparent</label></p>';
-
-
-		$output .= '<p><label for="'.$this->get_field_id('maxwidth').'">Maximum Width (pixels)</label><br>';
-		$output .= '<input id="'.$this->get_field_id('maxwidth').'" name="'.$this->get_field_name('maxwidth').'" type="number" value="'.esc_attr($instance['maxwidth']).'" /></p>';
-
-
-		$output .= '<p><label for="'.$this->get_field_id('hidearrow').'">Terminator Arrow</label><br>';
-		$output .= '<select id="'.$this->get_field_id('hidearrow').'" name="'.$this->get_field_name('hidearrow').'">';
-
-		$output .= '<option value="0" '.selected(!$instance['hidearrow'],true,false).'>Show Arrow</option>';
-		$output .= '<option value="1" '.selected($instance['hidearrow'],true,false).'>Hide Arrow</option>';
-
-		$output .= '</select></p>';
+		if(!empty($instance['colortransparent'])) {
+			echo ' or <input id="'.$this->get_field_id('colortransparent').'" name="'.$this->get_field_name('colortransparent').'" type="checkbox" value="1" checked="checked" />';
+		} else {
+			echo ' or <input id="'.$this->get_field_id('colortransparent').'" name="'.$this->get_field_name('colortransparent').'" type="checkbox" value="1" />';
+		}
 		
-		echo $output;
+		echo '<label for="'.$this->get_field_id('colortransparent').'">Transparent</label></p>';
+
+		echo '<p><label for="'.$this->get_field_id('maxwidth').'">Maximum Width (pixels)</label><br>';
+		echo '<input id="'.$this->get_field_id('maxwidth').'" name="'.$this->get_field_name('maxwidth').'" type="number" value="'.esc_attr($instance['maxwidth']).'" /></p>';
+
+		echo '<p><label for="'.$this->get_field_id('hidearrow').'">Terminator Arrow</label><br>';
+		echo '<select id="'.$this->get_field_id('hidearrow').'" name="'.$this->get_field_name('hidearrow').'">';
+
+		echo '<option value="0" '.selected(!$instance['hidearrow'],true,false).'>Show Arrow</option>';
+		echo '<option value="1" '.selected($instance['hidearrow'],true,false).'>Hide Arrow</option>';
+
+		echo '</select></p>';
 	}
 
 	public function update($new_instance, $old_instance) {
