@@ -1,0 +1,4 @@
+To minify the two JS files, I used uglifyjs (https://github.com/mishoo/UglifyJS)
+
+>uglifyjs Complications_Moon.js -c -o Complications_Moon.min.js
+>uglifyjs Complications_Moon_Block.js -c -o Complications_Moon_Block.min.js
