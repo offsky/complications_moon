@@ -9,7 +9,9 @@ Requires at least: 5.8
 Tested up to:      5.8.1
 Requires PHP:      7.0
 Author:            Jake Olefsky
+Contributors:      offsky
 Author URI:        https://www.jakeo.com/
+Donate Link:       https://paypal.me/jakeolefsky
 License:           GPL v2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +29,7 @@ This plugin allows you to add The Moon to your post, page or sidebar.  It will s
 
 = Usage =
 
-1. Via **Appearance > Widgets** in your Wordpress admin console. Click the + button and then click "The Moon" to add it to your sidebar or other widget section.
+1. Via **Appearance > Widgets** in your WordPress admin console. Click the + button and then click "The Moon" to add it to your sidebar or other widget section.
 2. Via the shortcode **[themoon]**, you can add this to any post or page. See the FAQ for customization options.
 
 = Privacy =
@@ -40,9 +42,9 @@ This plugin does not:
 
 == Installation ==
 
-= Wordpress =
+= WordPress =
 
-1. In your Wordpress Admin section, select **Plugins > Add New** and then search for "The Moon".
+1. In your WordPress Admin section, select **Plugins > Add New** and then search for "The Moon".
 
 2. Click Install
 
@@ -57,16 +59,16 @@ This plugin does not:
 
  OR
 
- 2. Decompress the zip file and using an FTP program to copy the contents to the /plugins/ folder of your Wordpress installation.
+ 2. Decompress the zip file and using an FTP program to copy the contents to the /plugins/ folder of your WordPress installation.
 
- 3. Go to the Plugins page of your Wordpress admin console and activate the plugin.
+ 3. Go to the Plugins page of your WordPress admin console and activate the plugin.
 
 
 == Frequently Asked Questions ==
 
 = How to add via a widget =
 
-1. In your Wordpress admin console go to **Appearance > Widgets**. 
+1. In your WordPress admin console go to **Appearance > Widgets**. 
 2. Click the + button and then click "The Moon" to add it to your sidebar or other widget section.
 3. Click "Update" to save the changes.
 4. You can click on "The Moon" widget to show a customization form.  The available options are:
@@ -78,14 +80,16 @@ This plugin does not:
 
 1. When editing a post or page, add a shortcode block and type **[themoon]**
 2. You can customize some options by including them in your shortcode.
-    A. Background color. The default is transparent. **[themoon color="#ff00ff"]**
-    B. Maximum Width in pixels. The default is no maximum. **[themoon maxwidth="250"]**
-    C. Whether to show an arrow on the edge of the moon's terminator shadow showing the direction that it is moving. The default is to show the arrow.  **[themoon hidearrow="1"]**
-3. Full customization example: [themoon  color="#ff00ff" maxwidth="250" hidearrow="1"]
+    A. Background color. The default is transparent. 
+    **[themoon color="#ff00ff"]**
+    B. Maximum Width in pixels. The default is no maximum. 
+    **[themoon maxwidth="250"]**
+    C. Whether to show an arrow on the edge of the moon's terminator shadow showing the direction that it is moving. The default is to show the arrow.  
+    **[themoon hidearrow="1"]**
+3. Full customization example: 
+**[themoon  color="#ff00ff" maxwidth="250" hidearrow="1"]**
 
 
-== Screenshots ==
-
-
-
-
+== Screenshots == 
+1. The Moon widget in the sidebar
+2. The Moon in a post or page
